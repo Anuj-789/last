@@ -1,0 +1,193 @@
+/* ========= Body / Color-blind mode ========= */
+body.colorblind {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+body.colorblind button {
+    background-color: #005bbb !important;
+    color: white !important;
+}
+body.colorblind p {
+    color: #0825aa !important;
+}
+
+body.colorblind footer-section {
+
+    background-color: #1a0285;
+}
+body.colorblind h2, body.colorblind h1 {
+    color: #03145d !important;
+}
+
+/* =======================
+   COLORBLIND / DARK MODE
+   Applies when body has class "colorblind"
+   ======================= */
+
+/* Base body */
+body.colorblind {
+    background: #ffffff !important;
+    color: #000 !important;
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+body.colorblind h1,
+body.colorblind h2,
+body.colorblind h3,
+body.colorblind h4,
+body.colorblind h5,
+body.colorblind h6 {
+    color: #03145d !important;
+}
+
+/* Paragraphs and text blocks */
+body.colorblind p,
+body.colorblind .hamburger,
+body.colorblind .pricepara,
+body.colorblind .box4para {
+    color: #0825aa !important;
+}
+
+/* Links */
+body.colorblind a,
+body.colorblind a:visited {
+    color: #005bbb !important;
+}
+
+/* Buttons */
+body.colorblind button,
+body.colorblind #continueBtn
+ {
+    background-color: #005bbb !important;
+    color: white !important;
+    border: 1px solid #005bbb !important;
+}
+
+body.colorblind .wcu-container li,
+body.colorblind .point {
+    color: #003f7f;
+
+}
+
+/* Navbar links */
+body.colorblind .nav-links a {
+    color: #005bbb !important;
+}
+
+/* Boxes and frames */
+body.colorblind .frame,
+body.colorblind .box,
+body.colorblind .box1,
+body.colorblind .box2 {
+    background-color: #fdffff !important;
+    border-color: #005bbb !important;
+}
+
+body.colorblind #viewb{
+     background-color: #e4d7ed !important;
+    border-color: #005bbb !important;
+}
+
+
+body.colorblind #viewb:hover{
+     background-color: #9fc3ed !important;
+    
+}
+
+
+/* Modal */
+body.colorblind #welcomeModalContent {
+    background-color: #f6f6d8 !important;
+    color: #000 !important;
+    border: 2px solid #005bbb !important;
+}
+
+/* Footer */
+body.colorblind .footer {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+}
+
+body.colorblind .footer-section {
+    color: #005bbb !important;
+}
+
+/* Color strip */
+body.colorblind .color-strip {
+    background: #ccc !important;
+    color: #02067a !important;
+}
+
+/* WhatsApp floating button */
+body.colorblind .whatsapp-float {
+    border-color: #005bbb !important;
+}
+
+body.colorblind .whatsapp-float img {
+    border-color: #005bbb !important;
+}
+
+/* Frames hover effect */
+body.colorblind .frame:hover {
+    background-color: #ccd0d5 !important;
+    border-color: #003f7f !important;
+}
+
+/* Smooth transitions */
+body.colorblind * {
+    transition: all 0.3s ease;
+}
+
+
+/* ========= Welcome Modal ========= */
+/* ========= Welcome Modal ========= */
+/* ========= Welcome Modal ========= */
+#welcomeModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#welcomeModalContent {
+    background: rgb(219, 224, 225);
+    padding: 25px;
+    color: #1a0285;
+    
+    max-width: 400px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+#closeBtn {
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Optional: Button hover effect */
+#continueBtn:hover {
+    background-color: #257ddb;
+}
+#continueBtn {
+    background-color: #022f5f;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+

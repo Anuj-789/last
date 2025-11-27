@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuj's Ucleve</title>
+  <link rel="stylesheet" href="dark.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 0px;
+
+     color: rgba(24, 121, 5, 0.874);
+      position: relative;
+
+
+
+    }
+
+
+
+    /* Change logo size here */
+   
+
+    #logo1 {
+      height: 200px;
+      width: 250px;
+
+    }
+
+    #logo2 {
+      height: 250px;
+      width: 600px;
+      margin-left: 200px;
+
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      transition: 0.4s ease;
+      margin-right: 1%;
+    }
+
+    .nav-links a {
+      text-decoration: underline;
+     color:#165a07;
+      font-size: 30px;
+
+    }
+
+    .nav-links a:hover {
+      color: #bf8e13;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      margin-right:4px;
+      
+
+    }
+
+    .color-strip {
+      padding-top: 15px;
+      font-size: 50px;
+      color: #fdfdfd;
+      text-align: center;
+      height: 100px;
+      width: 100%;
+      border: 2px solid rgb(171, 157, 157);
+      background: linear-gradient(135deg, #94dc16, #fbbc27);
+        display: flex;       
+    justify-content: center; 
+    align-items: center;
+
+    }
+
+
+
+    #menu-toggle {
+      display: none;
+    }
+
+
+
+   
+
+    .pricepara {
+      margin: 20px auto 20px auto;
+      font-size: 40px;
+      color: #f0ac1b;
+      text-align: justify;
+      text-align-last: center;
+      
+    }
+   
+
+    .menu {
+      position: fixed;
+      right: -250px;
+      transition: right 0.3s ease;
+    }
+    .footer{
+            background: #b9cf13;
+            color: #5b0303;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            flex-wrap: wrap;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            margin: 5px 0px 0px 19px;
+        }
+
+        .footer-section:hover {
+            color: #007c26;
+            cursor: pointer;
+            font-size: 25px;
+            /* text color changes */
+            transform: translateY(-5px);
+            /* slight upward movement */
+        }
+
+
+    /* ----------------------------------------------------------
+   ---------------------- card design for desktop DESIGN  -----------------------
+   ---------------------------------------------------------- */
+
+
+    .box1 {
+                                 
+               margin-left: 5%;
+               width: 90%;
+               height: auto;
+              
+               text-align: center; 
+               border-radius: 100px;
+            
+               display:flex;
+               flex-wrap: wrap;
+              justify-content:center;  /* horizontal center */
+              gap: 10%;
+
+        }
+
+    .frame {
+      border: 8px solid rgb(209, 200, 25);
+       background-color: #f6f6d8;
+      max-width: 320px;
+      width: 30%;
+      height: 350px;
+      border-radius: 90px;
+      transition: all 0.5s;
+      margin: 10px 0px 45px 0px;
+     
+      
+      
+              display: flex;        /* enable flex inside frame */
+    justify-content: center; /* horizontal center */
+    align-items: center;
+              /* enable flex layout */
+    flex-direction: column;
+
+    }
+
+    .frame:hover {
+      border: 8px solid darkolivegreen;
+      border-radius: 20px;
+      background-color: #f0f0b9;
+
+    }
+
+    .frame img {
+      border: 2px solid rgb(207, 184, 80);
+      width: 70%;
+      height: 200px;
+      margin: 10% 10%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .para {
+     
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    .butt {
+      color: #165a07;
+      margin: 0%;
+      
+      font-size: 20px;
+    }
+
+    .butt:hover {
+      text-decoration: dashed;
+       color: #165a07;
+    }
+
+    .frame,.footer-section,.nav-links,.hamburger,
+           .para,.butt {
+    -webkit-tap-highlight-color: transparent;
+          }
+
+
+    /* ----------------------------------------------------------
+   ---------------------- RESPONSIVE DESIGN for 768px -----------------------
+   ---------------------------------------------------------- */
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+
+      }
+
+      .color-strip {
+        height: 50px;
+        width: 100%;
+        font-size: 30px;
+        padding: 1%;
+       
+
+      }
+
+      #logo1 {
+        height: 80px;
+        width: 100px;
+        margin-left: 0%;
+        margin-bottom: 20px;
+      }
+
+      #logo2 {
+        margin-left: 1px;
+        height: 135px;
+        width: 200px;
+      }
+
+      .nav-links {
+                 position: absolute;
+        top: 0px;
+        left: 100%;
+        width: 27%;
+        background: #f3efef;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.6s ease;
+      }
+
+      .nav-links a {
+        font-size: 20px;
+
+      }
+
+      #menu-toggle:checked~.nav-links {
+        padding: 10px;
+        min-height: 135px;
+        opacity: 1;
+            left: 0;
+      }
+
+     
+    
+
+      .frame {
+        border: 4px solid rgb(209, 200, 25);
+        background-color: #f6f6d8;
+        width: 90%;
+        max-width: 100%;
+        height: 160px;
+        margin: 10px 25px 15px 25px;
+        border-radius: 38px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+
+      }
+
+      .frame:hover {
+        border: 4px solid darkolivegreen;
+        border-radius: 10px;
+        transform: scale(1.05);
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+
+
+      }
+
+      .frame.active {
+        border: 4px solid darkolivegreen;
+        border-radius: 10px;
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .frame img {
+        width: 50%;
+        height: 120px;
+        margin: 10px 15px 10px 0px;
+        border-radius: 15px;
+      }
+
+      .content-wrapper {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: raw;
+        justify-content: center;
+      }
+
+      .para {
+        margin: 0%;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .butt {
+
+        margin-left: 18%;
+        font-size: 18px;
+      }
+
+      .pricepara {
+        margin: 10px auto 15px auto ;
+        font-size: 25px;
+
+      }
+
+         .footer {
+                padding-bottom: 2px;
+                margin-top: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* allow wrapping */
+                justify-content: center;
+                font-size: 15px;
+                
+            }
+
+            .footer-section {
+                flex:3 0 35%;
+                /* 2 items per row (approx 45% width) */
+                margin: 5px;
+                /* gap between items */
+                text-align: center;
+            }
+
+            .footer-section:hover {
+                color: #007c26;
+                cursor: pointer;
+                font-size: 15px;
+                /* text color changes */
+                /* slight upward movement */
+            }
+
+    }
+   
+    /* ----------------------------------------------------------
+   ---------------------- RESPONSIVE DESIGN for more  1200 and 768px -----------------------
+   ---------------------------------------------------------- */
+    @media (min-width: 768px) and (max-width: 1250px) {
+
+      #logo1 {
+        height: 150px;
+        width: 200px;
+      }
+
+      #logo2 {
+        height: 180px;
+        width: 400px;
+        margin-left: 70px;
+
+      }
+
+      .nav-links a {
+        font-size: 25px;
+      }
+
+   .box1{
+             
+        justify-content: center;
+        gap: 8%;
+    
+           
+     
+        }
+
+
+      .frame {
+          width: 25%;       /* ⭐ Still 3 cards per row */
+        max-width: 200px;
+       
+        height: 250px;
+        margin: 20px 20px;
+        border-radius: 38px;
+         border: 5px solid rgb(209, 200, 25);
+                background-color: #f6f6d8;
+            /* ⭐ Still 3 cards in a row */
+    
+      }
+        
+          .frame:hover {
+      border: 5px solid darkolivegreen;
+    }
+
+      .frame img {
+
+        height: 130px;
+      }
+
+      .para {
+
+        font-size: 20px;
+      }
+
+      .butt {
+
+        font-size: 18px;
+      }
+
+      .pricepara {
+        margin: 15px auto 20px auto;       font-size: 20px;
+        font-size: 40px;
+      }
+       .footer {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .footer-section {
+                /* two per row */
+                margin: 10px 0;
+            }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+   
+  <a name="menu"></a>
+  <nav class="navbar">
+
+    <div class="logo">
+      <img id="logo1" src="photo/logo1.jpg" alt="Logo"> <!-- apna image naam yaha rakho -->
+      <img id="logo2" src="photo/logo2.jpg" alt="Middle Image"> <!-- Yeh beech wali image -->
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+
+
+  </nav>
+  <div class="color-strip">
+    <div class="stripdesign">
+      <marquee behavior="slide" direction="up" scrollamount="5%">
+        Our Prices
+      </marquee>
+    </div>
+  </div>
+
+
+  <div class="pricepara">
+     We buy all kinds of scraps:-
+  </div>
+
+
+
+   <div class="box1">
+  <div class="frame" onclick="window.location.href='https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello...i want more about copper'">
+    <img src="photo/copper.jpg" />
+    <span>
+      <p class="para">copper-₹500/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"
+    onclick="window.location.href='https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello... i want more about tin'">
+    <img src="photo/tin.png" />
+    <span>
+      <p class="para">Tin-₹30/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"> <img src="photo/wire.png" />
+    <span>
+      <p class="para">Old Wire-₹25/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"> <img src="photo/gatta.png" />
+
+    <span>
+      <p class="para">gatta-₹25/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"> <img src="photo/brass.png" />
+    <span>
+      <p class="para">Brass-₹300/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+  <div class="frame"> <img src="photo/wood.png" />
+    <span>
+      <p class="para">Wood-₹5/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"> <img src="photo/cloth.png" />
+    <span>
+      <p class="para">Wood-₹10/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+  <div class="frame"> <img src="photo/tyres.jpg" />
+    <span>
+      <p class="para">Brass-₹10/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+  <div class="frame"> <img src="photo/tv.webp" />
+    <span>
+      <p class="para">Wood-₹500/pcs</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  <div class="frame"> <img src="photo/books.jpeg" />
+    <span>
+      <p class="para">Wood-₹10/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+  <div class="frame"> <img src="photo/battery.jpeg" />
+    <span>
+      <p class="para">Wood-₹100/kg</p><a href="https://chat.whatsapp.com/JmSereDo3TAEjZFbUAzkwv?text=hello..."
+        class="butt">Contact</a>
+    </span>
+  </div>
+
+  </div>
+
+
+
+<footer class="footer">
+        <div class="footer-section" onclick="window.location.href='aboutus.html'">About Us</div>
+        <div class="footer-section" onclick="window.location.href='https://maps.app.goo.gl/ptYVM2C82DkYsSaYA'">Location</div>
+        <div class="footer-section" onclick="window.location.href='mailto:anuj437795@gmail.com?subject=Customer%20Review&body=Hello,%0APlease%20write%20your%20review%20below:%0A%0A'">feedback</div>
+        <div class="footer-section" onclick="window.location.href='contact.html'">Contact Us</div>
+        <div class="footer-section" onclick="window.location.href='#menu'">🔝Review</div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const frames = document.querySelectorAll(".frame");
+    let scrollStarted = false;
+    let hoverActive = false;  // 🔥 hover detection
+
+    function highlightCenterFrame() {
+      if (hoverActive) return;  // 🔥 Hover ho to scroll-highlight off
+
+      const screenCenter = window.innerHeight / 2;
+      let closestFrame = null;
+      let closestDistance = Infinity;
+
+      frames.forEach(frame => {
+        const rect = frame.getBoundingClientRect();
+        const frameCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(screenCenter - frameCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestFrame = frame;
+        }
+      });
+
+      frames.forEach(f => f.classList.remove("active"));
+      if (closestFrame) closestFrame.classList.add("active");
+    }
+
+    // 🔥 First scroll ke baad hi scroll-highlight ON hoga
+    function onFirstScroll() {
+      if (!scrollStarted) {
+        scrollStarted = true;
+        window.addEventListener("scroll", highlightCenterFrame);
+        highlightCenterFrame();
+      }
+    }
+
+    window.addEventListener("scroll", onFirstScroll, { once: true });
+
+    // 🔥 Hover start → scroll highlight pause
+    frames.forEach(frame => {
+      frame.addEventListener("mouseenter", () => {
+        hoverActive = true;
+        frames.forEach(f => f.classList.remove("active")); // scroll highlight remove
+        frame.classList.add("hover-active"); // hover highlight
+      });
+
+      // 🔥 Hover end → scroll highlight resume
+      frame.addEventListener("mouseleave", () => {
+        hoverActive = false;
+        frame.classList.remove("hover-active");
+        highlightCenterFrame(); // resume scroll highlight
+      });
+    });
+
+
+    window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      window.location.reload();
+    }
+  });
+
+
+  //reload on back press
+            window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      window.location.reload();
+    }
+  });
+
+  </script>
+  <script src="main.js"></script>
+
+
+</body>
+
+</html>
+

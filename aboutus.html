@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="dark.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;0
+             margin: 0;
+    padding: 0px;
+    overflow-x: hidden;
+    }
+
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+ .footer {
+            background: #b9cf13;
+            color: #5b0303;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            flex-wrap: wrap;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+       
+
+        .footer-section:hover {
+            color: #007c26;
+            cursor: pointer;
+            font-size: 25px;
+            /* text color changes */
+            transform: translateY(-5px);
+            /* slight upward movement */
+        }
+   
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 0px;
+
+      color: rgba(24, 121, 5, 0.874);
+      position: relative;
+
+
+
+    }
+
+
+
+
+    /* Change logo size here */
+    .logo img {}
+
+    #logo1 {
+      height: 200px;
+      width: 250px;
+
+    }
+
+    #logo2 {
+      height: 250px;
+      width: 600px;
+      margin-left: 200px;
+
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      transition: 0.4s ease;
+      margin-right: 1%;
+    }
+
+    .nav-links a {
+      text-decoration: underline;
+      color: #165a07;
+      font-size: 30px;
+
+    }
+
+    .nav-links a:hover {
+      color: #bf8e13;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      margin-right: 5px;
+    
+    }
+     .footer-section {
+            flex: 1;
+            text-align: center;
+            margin: 5px 0px 0px 19px;
+        }
+
+    .color-strip {
+      padding-top: 15px;
+      font-size: 50px;
+      color: #fdfdfd;
+      text-align: center;
+      height: 100px;
+      width: 100%;
+      border: 2px solid rgb(171, 157, 157);
+      background: linear-gradient(135deg, #94dc16, #fbbc27);
+       display: flex;       
+            justify-content: center; 
+            align-items: center;
+    }
+
+    .stripdesign {}
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .para {
+      max-width: 80%;
+      margin: 20px auto;
+      font-size: 20px;
+      color: rgb(198, 115, 79);
+      text-align: justify;
+      text-align-last: center;
+    }
+
+    .para h1 {
+
+      color: rgb(227, 148, 45);
+      margin-bottom: 10px 0px 10px;
+    }
+     .para1{
+  font-size: 20px;
+  margin-left: 40%;
+   color: rgb(198, 115, 79);
+      
+     
+    
+     }
+      .para1 h1 {
+
+display: flex;       
+            justify-content: center; 
+      color: rgb(227, 148, 45);
+      margin-bottom: 10px 0px 10px 0PX ;
+    }
+
+
+    .points {
+      list-style-type: none;
+      /* Remove default bullets */
+      list-style-position: inside;
+      display: flex;
+      
+    }
+
+   
+
+  .viewbcen,.footer-section,.nav-links,.hamburger,
+           .butt {
+    -webkit-tap-highlight-color: transparent;
+          }
+
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+
+      }
+       .para h1 {
+
+     font-size: 32px;
+     margin-bottom: 5px;
+    }
+     .para {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .para1 {
+      
+      font-size: 18px;
+    }
+    .para1 h1 {
+
+     font-size: 32px;
+     margin-bottom: 5px;
+    }
+
+      .color-strip {
+        height: 50px;
+        width: 100%;
+        font-size: 30px;
+        padding: 1%;
+      }
+
+      #logo1 {
+        height: 80px;
+        width: 100px;
+        margin-left: 0%;
+        margin-bottom: 20px;
+      }
+
+      #logo2 {
+        margin-left: 1px;
+        height: 135px;
+        width: 200px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 0px;
+        left: 100%;
+        width: 27%;
+        background: #f3efef;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.6s ease;
+      }
+       .footer {
+                padding-bottom: 2px;
+                margin-top: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* allow wrapping */
+                justify-content: center;
+                font-size: 15px;
+                
+            }
+
+            .footer-section {
+                flex:3 0 35%;
+                /* 2 items per row (approx 45% width) */
+                margin: 5px;
+                /* gap between items */
+                text-align: center;
+            }
+
+            .footer-section:hover {
+                color: #007c26;
+                cursor: pointer;
+                font-size: 15px;
+                /* text color changes */
+                /* slight upward movement */
+            }
+
+      .nav-links a {
+        font-size: 20px;
+
+      }
+
+      #menu-toggle:checked~.nav-links {
+        padding: 10px;
+        min-height: 135px;
+        opacity: 1;
+         left: 0;
+
+      }
+         .para1{
+  
+    margin-left: 17%;
+     }
+   
+    }
+
+
+    @media (min-width: 768px) and (max-width: 1250px) {
+
+      #logo1 {
+        height: 150px;
+        width: 200px;
+      }
+
+      #logo2 {
+        height: 180px;
+        width: 400px;
+        margin-left: 70px;
+
+      }
+
+      .nav-links a {
+        font-size: 25px;
+      }
+      .para1{
+  
+    margin-left: 38%;
+     }
+       .footer {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .footer-section {
+                /* two per row */
+                margin: 10px 0;
+            }
+
+
+    }
+  </style>
+</head>
+
+<body>
+ 
+
+  <a name="menu"></a>
+  <nav class="navbar">
+
+    <div class="logo">
+      <img id="logo1" src="photo/logo1.jpg" alt="Logo"> <!-- apna image naam yaha rakho -->
+      <img id="logo2" src="photo/logo2.jpg" alt="Middle Image"> <!-- Yeh beech wali image -->
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="price.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+
+
+  </nav>
+  <div class="color-strip">
+    <div class="stripdesign">
+      <marquee behavior="slide" direction="up" scrollamount="5%">About us</marquee></div>
+  </div>
+
+  <div class="para">
+    <h1>About Company</h1>
+    <p>
+      Scrap Buyer is a website of Zoya Enterprises Company, founded by Mr. Shaik Moin. With its head office in Kolkata,
+      Zoya Enterprises travels across India to collect scrap items,Scrap Buyer is a website of Zoya Enterprises Company
+      founder Mr.Shaik Moin. Zoya Enterprises Company is a fast growing organization in the scrap buying business. With
+      its head-office in Kolkata, we travel all over India to pick up items being sold as scrap - no longer needed by
+      you, whether in good reusable or damaged conditions. whether reusable or damaged.
+    </p>
+  </div>
+
+  <div class="para">
+    <h1>Our Services</h1>
+    <p>
+      We buy all kinds of scraps: Aluminium, Battery, Brass, Computer, Copper, Demolition Work, DG Sets, Electrical,
+      Ferrous & Non-Ferrous, GI, Iron & Steel Pipes, Lead, Motor Parts, Nickel, Office Furniture, Air Conditioners,
+      Machinery, Vehicles, Plastic, Solar, TMT Steel, and more.
+    </p>
+  </div>
+
+  <div class="para">
+    <h1>Why Choose Us?</h1>
+  </div>
+    <div class="para1">
+      <div class="point">👉 Good price for old scraps</div>
+      <div class="point">👉 10+ years of experience</div>
+      <div class="point">👉 Free pickup service</div>
+      <div class="point">👉 Immediate cash payments</div>
+      <div class="point">👉 Hassle-free process</div>
+      <div class="point">👉 Line 6 text here</div>
+      <div class="point">👉 Line 7 text here</div>
+      <div class="point">👉 Line 8 text here</div>
+      <div class="point">👉 Line 9 text here</div>
+      <div class="point">👉 Line 10 text here</div>
+    </div>
+
+
+ 
+
+
+
+  <footer class="footer">
+        <div class="footer-section" onclick="window.location.href='index.html'">main page</div>
+        <div class="footer-section" onclick="window.location.href='https://maps.app.goo.gl/ptYVM2C82DkYsSaYA'">Location</div>
+        <div class="footer-section" onclick="window.location.href='mailto:anuj437795@gmail.com?subject=Customer%20Review&body=Hello,%0APlease%20write%20your%20review%20below:%0A%0A'">Review</div>
+        <div class="footer-section" onclick="window.location.href='contact.html'">Contact Us</div>
+        <div class="footer-section" onclick="window.location.href='https://chat.whatsapp.com/Et3ldaMisZt7HFSHozN5qn'">join group</div>
+    </footer>
+
+    <script>
+      window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      window.location.reload();
+    }
+  });
+    </script>
+     <script src="main.js"></script>
+</body>
+
+</html>

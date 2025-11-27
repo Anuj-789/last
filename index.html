@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anuj's Ucleve</title>
+    <link rel="stylesheet" href="dark.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+
+        }
+ 
+
+
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0px;
+
+            color: rgba(24, 121, 5, 0.874);
+            position: relative;
+
+
+
+        }
+
+
+
+
+
+
+        #logo1 {
+            height: 200px;
+            width: 250px;
+
+        }
+
+        #logo2 {
+            height: 250px;
+            width: 600px;
+            margin-left: 200px;
+
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            transition: 0.4s ease;
+            margin-right: 1%;
+        }
+
+        .nav-links a {
+            text-decoration: underline;
+            color: #165a07;
+            font-size: 30px;
+
+        }
+
+        .nav-links a:hover {
+            color: #bf8e13;
+            text-decoration: none;
+      
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+
+        }
+
+        .color-strip {
+            padding-top: 15px;
+            font-size: 50px;
+            color: #fdfdfd;
+            text-align: center;
+            height: 100px;
+            width: 100%;
+            border: 2px solid rgb(171, 157, 157);
+            background: linear-gradient(135deg, #94dc16, #fbbc27);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .para {
+            max-width: 80%;
+            margin: 20px auto;
+            font-size: 20px;
+            color: rgb(162, 72, 33);
+            text-align: center;
+        }
+
+        .para h1 {
+
+            color: rgb(227, 148, 45);
+            margin-bottom: 10px 0px 10px;
+        }
+
+        .para1 {
+            font-size: 20px;
+            margin-left: 40%;
+            color: rgb(162, 72, 33);
+        }
+
+        .para1 h1 {
+
+            color: rgb(227, 148, 45);
+            margin-bottom: 10px 0px 10px;
+        }
+
+
+        .points {
+            list-style-type: none;
+            /* Remove default bullets */
+            list-style-position: inside;
+            display: flex;
+        }
+
+
+
+        /* After navabr next editing starting from here [for desktop size]*/
+        .pricepara {
+            margin: 1% 20% 2% 20%;
+            font-size: 25px;
+            color: #f0ac1b;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .box {
+            border: 5px solid yellowgreen;
+            width: 90%;
+            height: 500px;
+            margin-left: 5%;
+            border-radius: 10px;
+        }
+
+        .frame {
+            border: 8px solid rgb(209, 200, 25);
+            background-color: #f6f6d8;
+            min-width: 20%;
+            width: 20%;
+            height: 320px;
+            border-radius: 90px;
+
+            transition: all 0.5s;
+            vertical-align: top;
+            cursor: pointer;
+            justify-content: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+
+        }
+
+        .frame:hover {
+            border: 8px solid darkolivegreen;
+            border-radius: 20px;
+            background-color: #f0f0b9;
+
+        }
+
+        .frame img {
+            border: 2px solid rgb(207, 184, 80);
+            width: 70%;
+            height: 180px;
+            margin: 10% 10%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .viewbcen,
+        .footer-section,
+        .nav-links,
+        .hamburger,
+        .frame {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .para {
+
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 25px;
+
+        }
+
+        .butt {
+            color: #165a07;
+            margin: 0%;
+
+            font-size: 20px;
+        }
+
+        .butt:hover {
+            text-decoration: dashed;
+            color: #165a07;
+        }
+
+        #frame1 {
+            width: 50%;
+            margin: 20px 10% 40px 24%;
+            height: 250px;
+            display: flex;
+            padding-right: 2%;
+        }
+
+        #frame:hover {
+
+            border: 8px solid darkolivegreen;
+            border-radius: 20px;
+            background-color: #f0f0b9;
+
+        }
+
+        #frame1 h1 {
+            font-size: 25px;
+            margin: 12% 0px 10px 0%;
+        }
+
+        #frame1 img {
+            height: 60%;
+            width: 25%;
+            margin: 7% 10% 15% 10%;
+        }
+
+        #frame1 p {
+            font-size: 20px;
+            color: #165a07;
+        }
+
+        #extra {
+            margin: 2% 8% 2% 2%;
+        }
+
+        .box4para {
+            text-align: justify;
+            font-size: 20px;
+            text-align-last: center;
+            padding: 2px 14% 20px 14%;
+            color: rgb(198, 115, 79);
+            margin-bottom: 0%;
+
+        }
+
+        .why-choose-us {
+            width: 100%;
+        }
+
+        .why-choose-us h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #f0ac1b;
+        }
+
+        .wcu-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0px;
+            max-width: 900px;
+            margin: 20px 40px 20px 200px;
+        }
+
+        .wcu-text,
+        .wcu-image {
+            flex: 1;
+        }
+
+        .wcu-text ul {
+            padding-left: 10px;
+            line-height: 1.5;
+            font-size: 18px;
+            color: rgb(198, 115, 79);
+        }
+
+        .wcu-text ul li {
+            margin-bottom: 10px;
+        }
+
+        .wcu-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Hidden states */
+        .hidden-left {
+            opacity: 0;
+            transform: translateX(-80px);
+            transition: all 0.7s ease-out;
+        }
+
+        .hidden-right {
+            opacity: 0;
+            transform: translateX(80px);
+            transition: all 0.7s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+
+        .box1 {
+
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 90%;
+            height: auto;
+            border-top: 10px solid #b9cf13;
+            text-align: center;
+            border-radius: 100px;
+            padding: 20px 60px 20px 60px;
+            display: column;
+            justify-content: center;
+            /* horizontal center */
+
+
+        }
+
+        .box2 {
+            display: flex;
+            /* align frames in a row */
+            justify-content: space-between;
+            /* space between frames */
+            align-items: flex-start;
+
+
+        }
+
+        .box1 h2 {
+            font-size: 30px;
+            margin: 5px 5px 15px 3%;
+            color: #f0ac1b;
+        }
+
+        .viewbcen {
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            margin-top: 2%;
+        }
+
+        #viewb {
+            font-size: 20px;
+            border-radius: 15px;
+            background-color: #f6f6d8;
+            border: 5px solid rgb(209, 200, 25);
+
+            color: #165a07;
+            padding: 5px;
+            transition: all 0.5s;
+
+
+
+        }
+
+        #viewb:hover {
+            border-radius: 5px;
+            background-color: rgb(227, 240, 157);
+            border: 5px solid darkolivegreen;
+        }
+
+
+        /* Basic Footer Style */
+        .footer {
+            background: #b9cf13;
+            color: #5b0303;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            flex-wrap: wrap;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+            margin: 5px 0px 0px 19px;
+        }
+
+        .footer-section:hover {
+            color: #007c26;
+            cursor: pointer;
+            font-size: 25px;
+            /* text color changes */
+            transform: translateY(-5px);
+            /* slight upward movement */
+        }
+
+
+
+
+        .whatsapp-float {
+            position: fixed;
+            left: 0%;
+            /* left side distance */
+            bottom: 36.5%;
+            /* niche distance */
+
+            border: 4px solid rgb(255, 255, 255);
+            padding: 5px 5px;
+            border-radius: 30px;
+
+        }
+
+        .whatsapp-float img {
+            width: 70px;
+            /* size control */
+            height: 80px;
+            border: 5px solid rgb(188, 234, 102);
+            border-radius: 15px;
+        }
+
+        .whatsapp-float:hover {
+            border: 8px solid #f0ac1b;
+            transition: all 0.2s;
+        }
+
+
+
+
+
+
+        /* ///////////////////////////////////for less than 768 px/////////////////////////*/
+        /* ///////////////////////////////////for less than 768 px/////////////////////////*/
+        /* ///////////////////////////////////for less than 768 px/////////////////////////*/
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+
+            }
+              #welcomeModalContent {
+                width: 80%;
+                padding: 20px;
+            }
+
+            .color-strip {
+                height: 50px;
+                max-width: 100%;
+                font-size: 30px;
+                padding: 1%;
+
+
+            }
+
+            #logo1 {
+                height: 80px;
+                width: 100px;
+                margin-left: 0%;
+                margin-bottom: 20px;
+            }
+
+            #logo2 {
+                margin-left: 1px;
+                height: 135px;
+                width: 200px;
+            }
+
+            .nav-links {
+                 position: absolute;
+        top: 0px;
+        left: 100%;
+        width: 27%;
+        background: #f3efef;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.6s ease;
+            }
+
+            .nav-links a {
+                font-size: 20px;
+
+            }
+
+            #menu-toggle:checked~.nav-links {
+                padding: 10px;
+                min-height: 135px;
+                opacity: 1;
+                 left: 0;
+
+            }
+
+            .para1 {
+
+                margin-left: 18%;
+            }
+
+            .pricepara {
+                margin: 2% 7% 1% 9%;
+                font-size: 23px;
+
+            }
+
+            .frame {
+                border: 5px solid rgb(209, 200, 25);
+                background-color: #f6f6d8;
+                width: 100%;
+                height: 160px;
+                margin: 25px auto;
+                border-radius: 38px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 15px;
+
+            }
+
+            .frame:hover {
+                border: 5px solid darkolivegreen;
+                border-radius: 10px;
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+            }
+
+            .frame.active {
+                border: 8px solid darkolivegreen;
+                border-radius: 10px;
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+
+            .para {
+
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 25px;
+                margin-left: 0%;
+
+            }
+
+            .butt {
+                color: #165a07;
+                margin: 0%;
+                margin-left: 0%;
+                font-size: 20px;
+            }
+
+            .box4para {
+
+                font-size: 18px;
+                text-align-last: center;
+                padding: 3% 11% 0% 10%;
+                margin-top: 0%;
+
+            }
+
+            .wcu-container {
+                flex-direction: column;
+                text-align: left;
+                align-items: flex-start;
+                margin: 10px 30px 5px 50px;
+                gap: 2px;
+            }
+
+            .why-choose-us {
+                padding: 10px 15px;
+            }
+
+            .why-choose-us h2 {
+                font-size: 28px;
+            }
+
+            .wcu-text ul {
+                font-size: 18px;
+                margin-left: 2px;
+                line-height: 1;
+            }
+
+            .wcu-image img {
+                width: 100%;
+                height: 200px;
+                margin-top: 0%;
+
+            }
+
+            #ndimg {
+                display: none;
+            }
+
+            .box1 {
+                padding-top: 10%;
+            }
+
+            .frame {
+                display: none;
+            }
+
+            .f1 {}
+
+            .f1 {
+                display: flex;
+
+                background-image: url(photo/recmat3.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+            }
+
+            .f1 img {
+                display: none;
+            }
+
+            .f1 p {
+                display: none;
+            }
+
+            .f1 a {
+                display: none;
+            }
+
+            #viewb {
+
+                border: 4px solid rgb(209, 200, 25);
+                font-size: 20px;
+                border-radius: 15px;
+
+            }
+
+            #viewb:hover {
+
+                background-color: rgb(227, 240, 157);
+                border: 6px solid darkolivegreen;
+            }
+
+            .footer {
+                padding-bottom: 2px;
+                margin-top: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* allow wrapping */
+                justify-content: center;
+                font-size: 15px;
+
+            }
+
+            .footer-section {
+                flex: 3 0 35%;
+                /* 2 items per row (approx 45% width) */
+                margin: 5px;
+                /* gap between items */
+                text-align: center;
+            }
+
+            .footer-section:hover {
+                color: #007c26;
+                cursor: pointer;
+                font-size: 15px;
+                /* text color changes */
+                /* slight upward movement */
+            }
+
+        .whatsapp-float {
+          
+           
+            /* left side distance */
+            bottom: 0%;
+            /* niche distance */
+            
+            border: 1px solid rgb(255, 255, 255);
+           
+
+        }
+
+        .whatsapp-float img {
+            width: 40px;
+            /* size control */
+            height: 40px;
+            border: 2px solid rgb(188, 234, 102);
+          
+        }
+
+        .whatsapp-float:hover {
+            border: 3px solid #f0ac1b;
+          transition: all 0.2s;
+        }
+
+        }
+
+        /* ///////////////////////////////////for between than 1200 and 768 px/////////////////////////*/
+        /* ///////////////////////////////////for between than 1200 and 768 px/////////////////////////*/
+        /* ///////////////////////////////////for between than 1200 and 768 px/////////////////////////*/
+        @media (min-width: 768px) and (max-width: 1250px) {
+
+            #logo1 {
+                height: 150px;
+                width: 200px;
+            }
+
+            #logo2 {
+                height: 180px;
+                width: 400px;
+                margin-left: 70px;
+
+            }
+
+            .nav-links a {
+                font-size: 25px;
+            }
+
+
+
+            .pricepara {
+                margin: 3% 20% 2% 20%;
+                font-size: 22px;
+            }
+
+            .frame {
+                height: 250px;
+                margin-left: 20px 20px;
+                border: 6px solid rgb(209, 200, 25);
+                background-color: #f6f6d8;
+                border-radius: 38px;
+            }
+
+            .frame:hover {
+
+                border: 6px solid darkolivegreen;
+                border-radius: 20px;
+
+
+            }
+
+            .box4para {
+                margin-top: 0%;
+                padding: 0% 11% 0% 10%;
+                margin-top: 0%;
+
+            }
+
+
+            .frame img {
+                height: 130px;
+
+            }
+
+            .para {
+                margin-top: 0%;
+                font-size: 22px;
+
+            }
+
+            .butt {
+
+                font-size: 15px;
+            }
+
+            #extra {
+                margin: 3% 3% 2% 2%;
+            }
+
+            .wcu-container {
+                flex-direction: raw;
+                text-align: left;
+
+                margin: 20px 60px 20px 200px;
+            }
+
+            .wcu-image img {
+                width: 60%;
+                height: 200px;
+                margin-top: 0%;
+
+            }
+
+            .wcu-text ul {
+                font-size: 18px;
+                margin-left: 2x;
+                line-height: 1;
+                padding-left: 0%;
+            }
+
+            .why-choose-us h2 {
+                font-size: 32px;
+            }
+
+
+            #viewb {
+                font-size: 17px;
+                border-radius: 10px;
+                border: 4px solid rgb(209, 200, 25);
+
+            }
+
+            #viewb:hover {
+                border-radius: 4px;
+                border: 4px solid darkolivegreen;
+            }
+
+
+            .footer {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .footer-section {
+                /* two per row */
+                margin: 10px 0;
+            }
+
+
+
+            .whatsapp-float {
+
+                width: 70px;
+                /* size control */
+                height: 80px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- Welcome Modal -->
+    <div id="welcomeModal">
+        <div id="welcomeModalContent">
+            <span id="closeBtn">&times;</span>
+            <h1>Heartly Welcome</h1><br>
+            <p style="font-size: 20px;" >Double tap / double click anywhere on the page to change colors for color-blind accessibility.</p>
+            <button id="continueBtn">OK</button>
+        </div>
+    </div>
+
+
+
+
+    <a name="menu"></a>
+    <nav class="navbar">
+
+        <div class="logo">
+            <img id="logo1" src="photo/logo1.jpg" alt="Logo"> <!-- apna image naam yaha rakho -->
+            <img id="logo2" src="photo/logo2.jpg" alt="Middle Image"> <!-- Yeh beech wali image -->
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="price.html">Services</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+
+    </nav>
+    <div class="color-strip">
+        <div class="stripdesign">
+            <marquee behavior="slide" direction="up" scrollamount="5%">door to door scrap buyer</marquee>
+        </div>
+    </div>
+
+    <div class="pricepara">
+        <h2>Ucleve Treaders</h2>
+        <p> "Best Scrap Buyer in your city"</p>
+    </div>
+
+    <p class="box4para">
+        we are Global Traders one of the most reputable scrap buyers in India.
+        We are the best because we pay the most for your old and scrap metal.
+        our team visit your place and estimate your scrap value and we will give you payment instantly.
+        we, iron scrap buyer, electrical scrap buyer, ac scrap buyer, dg set scrap buyer, and IT material scrap buyer,
+        as well as dismantling services provider, office buyback services, industrial dismantling service provider,
+        and office relocation services. disassembly, old machinery scrap buyer, computer scrap buyer, electronic waste
+        scrap buyer,
+        e waste scrap buyer, office furniture scrap buyer, solar scrap buyer, demolition work services provider, and
+        battery ups scrap buyer.
+
+    </p>
+
+
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+
+        <div class="wcu-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="wcu-text hidden-left">
+                <ul>
+                    <li>High quality service</li>
+                    <li>Experienced professional team</li>
+                    <li>Fast delivery and support</li>
+                    <li>Affordable pricing structure</li>
+                    <li>Cutting-edge modern solutions</li>
+                    <li>100% customer satisfaction</li>
+                    <li>Trusted by top brands</li>
+                    <li>Innovative & future-proof planning</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="wcu-image hidden-right">
+                <img src="photo/recycle1.jpg" alt="Why Choose Us Image">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Recycle Your Scrap in 3 Steps</h2>
+
+        <div class="wcu-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="wcu-text hidden-left">
+                <ul>
+                    <li>Simple steps to folllow:-</li>
+                    <li>Step1: Call & Enquiry</li>
+                    <li>Step2: Book a Pickup Time</li>
+                    <li>Step3: Scrap Pickup </li>
+                    <li>Step4: Get Paid At Same Time</li>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="wcu-image hidden-right" id="ndimg">
+                <img src="photo/recycle11.webp" width="50%" height="250px" alt="Why Choose Us Image">
+            </div>
+    </section>
+
+
+
+    <div class="box1">
+
+
+        <h2 align="center">DIFFERENT TYPES OF SCARPS:-</h2>
+        <div class="box2">
+            <div class="frame f1" onclick="window.location.href='price.html'">
+                <img src="photo/tyres.jpg">
+                <span>
+                    <p class="para">tyres</p><a href="price.html" class="butt">Contact</a>
+                </span>
+            </div>
+
+
+            <div class="frame f2" onclick="window.location.href='price.html'">
+                <img src="photo/tin.png" />
+                <span>
+                    <p class="para">Tin</p><a href="price.html" class="butt">Contact</a>
+                </span>
+            </div>
+            <div class="frame f3" onclick="window.location.href='price.html'"> <img src="photo/wood.png" />
+                <span>
+                    <p class="para">wood</p><a href="price.html" class="butt">Contact</a>
+                </span>
+            </div>
+        </div>
+        <div class="viewbcen">
+            <a id="viewb" href="price.html">View more</a>
+        </div>
+    </div>
+
+
+    <a href="https://wa.me/917480982980" class="whatsapp-float" target="_blank">
+        <img src="photo/whatsap.webp" alt="WhatsApp">
+    </a>
+
+    <footer class="footer">
+        <div class="footer-section" onclick="window.location.href='aboutus.html'">About Us</div>
+        <div class="footer-section" onclick="window.location.href='https://maps.app.goo.gl/ptYVM2C82DkYsSaYA'">Location
+        </div>
+        <div class="footer-section"
+            onclick="window.location.href='mailto:anuj437795@gmail.com?subject=Customer%20Review&body=Hello,%0APlease%20write%20your%20review%20below:%0A%0A'">
+            Review</div>
+        <div class="footer-section" onclick="window.location.href='contact.html'">Contact Us</div>
+        <div class="footer-section" onclick="window.location.href='https://chat.whatsapp.com/Et3ldaMisZt7HFSHozN5qn'">
+            join group</div>
+    </footer>
+
+    <script>
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.hidden-left, .hidden-right')
+            .forEach(el => observer.observe(el));
+
+            
+  
+
+
+//reload on back press
+            window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      window.location.reload();
+    }
+  });
+
+
+
+
+  function initWelcomeModal() {
+        const modal = document.getElementById('welcomeModal');
+        const closeBtn = document.getElementById('closeBtn');
+        const continueBtn = document.getElementById('continueBtn');
+
+        // Show modal only if not shown in this browser session
+        if (!sessionStorage.getItem('welcomeShown')) {
+            modal.style.display = 'flex'; // show modal
+
+            const hideModal = () => {
+                modal.style.display = 'none';
+                sessionStorage.setItem('welcomeShown', 'true'); // mark as shown for this session
+            };
+
+            // Close modal on cross button click
+            closeBtn.addEventListener('click', hideModal);
+
+            // Close modal on continue button click
+            continueBtn.addEventListener('click', hideModal);
+
+            // Close modal if click outside content
+            window.addEventListener('click', (event) => {
+                if(event.target === modal) hideModal();
+            });
+        } else {
+            if(modal) modal.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initWelcomeModal);
+
+
+
+    </script>
+    <script src="main.js"></script>
+ 
+
+
+    
+</body>
+
+</html>
